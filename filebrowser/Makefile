@@ -56,8 +56,7 @@ define Build/Compile
 endef
 
 define Package/filebrowser/install
-	$(INSTALL_DIR) $(1)/usr/lib/filebrowser 
-	$(INSTALL_BIN) $(GO_PKG_BUILD_BIN_DIR)/filebrowser $(1)/usr/lib/filebrowser/filebrowser
+	$(call GoPackage/Package/Install/Bin,$(1))
 
 	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_CONF) $(CURDIR)/files/filebrowser.config $(1)/etc/config/filebrowser
