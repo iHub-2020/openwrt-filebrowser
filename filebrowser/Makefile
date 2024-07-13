@@ -55,14 +55,14 @@ define Build/Compile
 	)
 endef
 
-define Package/filebrowser/install
-	$(call GoPackage/Package/Install/Bin,$(1))
+#define Package/filebrowser/install
+#	$(call GoPackage/Package/Install/Bin,$(1))
 
-	$(INSTALL_DIR) $(1)/etc/config
-	$(INSTALL_CONF) $(CURDIR)/files/filebrowser.config $(1)/etc/config/filebrowser
-	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_BIN) $(CURDIR)/files/filebrowser.init $(1)/etc/init.d/filebrowser
-endef
+#	$(INSTALL_DIR) $(1)/etc/config
+#	$(INSTALL_CONF) $(CURDIR)/files/filebrowser.config $(1)/etc/config/filebrowser
+#	$(INSTALL_DIR) $(1)/etc/init.d
+#	$(INSTALL_BIN) $(CURDIR)/files/filebrowser.init $(1)/etc/init.d/filebrowser
+#endef
 
 $(eval $(call GoBinPackage,filebrowser))
 $(eval $(call BuildPackage,filebrowser))
