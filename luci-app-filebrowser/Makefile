@@ -6,7 +6,7 @@
 include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=LuCI Support for FileBrowser
-#LUCI_DEPENDS:=+filebrowser +luci-compat
+LUCI_DEPENDS:=+filebrowser +luci-compat
 LUCI_PKGARCH:=all
 
 define Package/$(PKG_NAME)/postinst
