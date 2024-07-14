@@ -6,9 +6,16 @@
 include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=LuCI Support for FileBrowser
-#LUCI_DEPENDS:=+filebrowser
+#LUCI_DEPENDS:=+filebrowser +luci-compat
 LUCI_PKGARCH:=all
 
+define Package/$(PKG_NAME)/postinst
+#!/bin/sh
+[ -n "${IPKG_INSTROOT}" ] || {
+	( . /etc/uci-defaults/luci-app-filebrowser ) && rm -f /etc/uci-defaults/luci-app-filebrowser
+	exit 0
+}
+endef
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
