@@ -43,7 +43,7 @@ o.rmempty = false
 
 o = s:option(Value, "executable_directory", translate("Executable directory"),
              translate(
-                 "The file size is large, requiring at least 32M space. It is recommended to insert a usb flash drive or hard disk, or use it in the tmp directory<br />For example, /mnt/sda1<br />For example, /usr/bin"))
+                 "The file size is large, requiring at least 32M space. It is recommended to insert a usb flash drive or hard disk, or use it in the /usr/bin directory<br />For example, /mnt/sda1<br />For example, /usr/bin"))
 o.default = "/usr/bin"
 o.rmempty = false
 
