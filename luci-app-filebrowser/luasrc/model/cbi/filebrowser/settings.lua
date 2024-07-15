@@ -22,6 +22,14 @@ o = s:option(Value, "database", translate("Database path"))
 o.default = "/etc/filebrowser.db"
 o.rmempty = false
 
+o = s:option(Value, "username", translate("Initial username"))
+o.default = "admin"
+o.rmempty = false
+
+o = s:option(Value, "password", translate("Initial password"))
+o.default = "admin"
+o.rmempty = false
+
 o = s:option(Value, "ssl_cert", translate("SSL cert"))
 o.default = ""
 
@@ -35,8 +43,8 @@ o.rmempty = false
 
 o = s:option(Value, "executable_directory", translate("Executable directory"),
              translate(
-                 "The file size is large, requiring at least 32M space. It is recommended to insert a usb flash drive or hard disk, or use it in the tmp directory<br />For example, /mnt/sda1<br />For example, /tmp"))
-o.default = "/tmp"
+                 "The file size is large, requiring at least 32M space. It is recommended to insert a usb flash drive or hard disk, or use it in the tmp directory<br />For example, /mnt/sda1<br />For example, /usr/bin"))
+o.default = "/usr/bin"
 o.rmempty = false
 
 o = s:option(Button, "_download", translate("Manually download"), translate(
